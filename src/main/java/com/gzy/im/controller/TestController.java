@@ -23,6 +23,8 @@ public class TestController {
     @Resource
     UserRepository userRepository;
 
+    //    访问 api 可以这样访问
+    //    http://localhost:8080/register?username=ffff11111222&password=123456
     @RequestMapping("/register")
     public Object test(String username,String password){
 
