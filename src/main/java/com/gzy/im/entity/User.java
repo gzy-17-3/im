@@ -9,12 +9,16 @@ import javax.persistence.*;
 @Entity
 @Setter
 @Getter
+@Table(uniqueConstraints = {
+        @UniqueConstraint(columnNames = {"name"})
+})
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(length = 191)
     private String name;
 
     @JsonIgnore
