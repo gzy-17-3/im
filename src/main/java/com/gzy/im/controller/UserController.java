@@ -34,7 +34,7 @@ public class UserController {
             return ResponseEntity.status(401).build();
         }
 
-        if (!tokenByToken.getId().equals(userid)) {
+        if (!tokenByToken.getUserid().equals(userid)) {
             return ResponseEntity.status(401).build();
         }
 
